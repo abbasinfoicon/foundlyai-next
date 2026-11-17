@@ -102,7 +102,7 @@ const Footer = () => {
         {/* CTA panel */}
         <section className="relative grid min-h-[180px] overflow-hidden rounded-[22px] border border-[#647cff]/35 bg-[linear-gradient(0deg,rgba(20,31,76,.86),rgba(16,17,51,.58)_52%,rgba(22,17,60,.72))] px-7 shadow-[0_18px_70px_rgba(27,56,180,.16),inset_0_1px_0_rgba(255,255,255,.10)] backdrop-blur-xl sm:px-10 lg:grid-cols-[1.25fr_1fr_auto] lg:items-center lg:gap-8 lg:px-10">
           <div className="relative z-10">
-            <h2 className="text-[26px] font-semibold leading-[1.15] tracking-[-0.045em] text-white sm:text-[34px] lg:text-[38px]">
+            <h2 className="text-[26px] font-semibold leading-[1.15] text-white sm:text-[34px] lg:text-[38px]">
               A little AI. A lot more <span className="bg-gradient-to-r from-[#36C8FF] to-[#A36BFF] bg-clip-text text-transparent">visibility.</span>
             </h2>
             <p className="mt-4 max-w-[550px] text-[15px] leading-[1.65] text-[#C9D0F0] sm:text-[17px]">
@@ -129,8 +129,8 @@ const Footer = () => {
             <Link className="transition-opacity hover:opacity-80" href="/">
               <img className="h-auto w-[160px] object-contain" src="/assets/image/logo-white.png" alt="Foundly AI" />
             </Link>
-            <Link className="mt-6 text-[14px] text-[#C5CBE4] transition hover:text-white" href="mailto:info@upliftai.co">
-              info@upliftai.co
+            <Link className="mt-6 text-[14px] sm:text-[16px] text-[#C5CBE4] transition hover:text-white" href="mailto:info@foundlyai.co">
+              info@foundlyai.co
             </Link>
             <ul className="mt-8 flex items-center gap-2.5" aria-label="Follow Foundly AI on social media">
               {[
@@ -155,8 +155,8 @@ const Footer = () => {
           </div>
 
           {footerGroups.map((group) => (
-            <nav key={group.title} className="flex flex-col items-start gap-[15px] text-[14px] leading-[1.3] text-[#C5CBE4]" aria-label={`Footer ${group.title}`}>
-              <strong className="mb-1 text-[15px] sm:text-[18px] font-semibold text-white">{group.title}</strong>
+            <nav key={group.title} className="flex flex-col items-start gap-[15px] text-[14px] sm:text-[16px] leading-[1.3] text-[#C5CBE4]" aria-label={`Footer ${group.title}`}>
+              <strong className="mb-1 text-[16px] sm:text-[20px] font-semibold text-white">{group.title}</strong>
               {group.links.map((label) => (
                 <Link key={label} className="transition-colors duration-200 hover:translate-x-0.5 hover:text-white" href="/">
                   {label}
@@ -166,7 +166,7 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col gap-5 pt-6 text-[13px] text-[#C5CBE4] sm:flex-row sm:items-center sm:justify-between lg:mt-12">
+        <div className="mt-12 flex flex-col gap-5 pt-6 text-[14px] sm:text-[15px] text-[#C5CBE4] sm:flex-row sm:items-center sm:justify-between lg:mt-12">
           <span>© 2026 foundly AI. All rights reserved.</span>
           <nav className="flex items-center gap-6" aria-label="Legal">
             <Link className="transition-colors hover:text-white" href="/">Privacy policy</Link>

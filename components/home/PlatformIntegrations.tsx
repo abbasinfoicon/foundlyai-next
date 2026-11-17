@@ -172,7 +172,7 @@ function IntegrationGroup({
     <div className="mb-10 last:mb-0">
       <p
   id={id}
-  className="relative mb-4 pl-4 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#536486] sm:text-[14px]
+  className="relative mb-4 pl-4 text-[12px] font-semibold uppercase text-[#536486] sm:text-[14px]
   after:content-[''] after:absolute after:top-1/2 after:h-px after:w-full after:-translate-y-1/2 after:bg-[#f3f3f3] overflow-hidden"
 >
   {title} {'  '}
@@ -206,10 +206,10 @@ function IntegrationGroup({
                 <FiArrowUpRight />
               </span>
 
-              <span className="relative z-10 mt-[20px] block max-w-[190px] text-[18px] font-semibold leading-[1.2] tracking-[-0.035em] text-[#101a35]">
+              <span className="relative z-10 mt-[20px] block max-w-[190px] text-[18px] font-semibold leading-[1.2] text-[#101a35]">
                 {item.name}
               </span>
-              <span className="relative z-10 mt-[7px] block max-w-[195px] text-[14px] leading-[1.45] text-[#687998]">
+              <span className="relative z-10 mt-[7px] block max-w-[195px] text-[15px] leading-[1.45] text-[var(--text-color)]">
                 {item.detail}
               </span>
 
@@ -227,24 +227,24 @@ export default function SocialMedia() {
     <section
       id="platforms"
       aria-labelledby="foundly-platforms-title"
-      className="relative isolate overflow-hidden px-4 py-16 text-[#11111a] sm:px-6 sm:py-[72px] lg:px-8 bg-contains bg-no-repeat bg-bottom"
+      className="relative isolate overflow-hidden px-4 py-16 text-[var(--text-color2)] sm:px-6 sm:py-[72px] lg:px-8 bg-contains bg-no-repeat bg-bottom"
       style={{backgroundImage: "url('/assets/image/bg/seamless-bg.webp')"}}
     >
       <div className="relative mx-auto max-w-[1240px]">
         <header className="mx-auto mb-[58px] max-w-[1024px] text-center">
           <div className="mb-6 flex items-center justify-center gap-4">
             <span className="hidden h-px w-20 bg-gradient-to-r from-transparent to-blue-200 sm:block" />
-            <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.08)]">
+            <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.08)]">
               <span className="text-base leading-none">✦</span>
               SEAMLESS INTEGRATION
             </p>
             <span className="hidden h-px w-20 bg-gradient-to-l from-transparent to-blue-200 sm:block" />
           </div>
-          <h2 className="title mt-4 font-medium leading-[1.08] tracking-[-0.065em]">
+          <h2 className="title mt-4 leading-[1.08]">
             Works With the Platforms  {' '}
             <span className="text-[var(--primary-color)]">Your Business Already Uses</span>
           </h2>
-          <p className="desc mx-auto mt-5 leading-[1.65] text-[#737381]">
+          <p className="desc mx-auto mt-5 leading-[1.65] text-[var(--text-color)]">
             Your existing website and social media channels are important parts of your digital presence. Foundly.ai supports connections with selected platforms, helping you manage relevant content and publishing activities without rebuilding your existing setup.
           </p>
         </header>

@@ -171,14 +171,14 @@ function SocialPostCard({
     >
       <header className="mb-3 flex min-w-0 items-center gap-2 [transform:translateZ(12px)]">
         <NetworkIcon network={post.network} />
-        <strong className="min-w-0 flex-1 truncate text-[13px] font-semibold tracking-[-0.02em] sm:text-[15px]">
+        <strong className="min-w-0 flex-1 truncate text-[13px] font-semibold sm:text-[15px]">
           {post.business}
         </strong>
         <FiMoreHorizontal className="h-4 w-4 shrink-0 text-white/45" />
       </header>
 
       {post.copy && (
-        <p className="mb-3 min-h-[34px] text-[12px] leading-[1.6] text-white/80 sm:text-[14px]">
+        <p className="mb-3 min-h-[34px] text-[12px] leading-[1.6] text-white/75 sm:text-[14px]">
           {post.copy}
         </p>
       )}
@@ -195,7 +195,7 @@ function SocialPostCard({
 
       <footer className="mt-auto pt-3 [transform:translateZ(10px)]">
         {post.handle && (
-          <p className="mb-2 line-clamp-2 text-[12px] sm:text-[13px] leading-[1.5] text-white/80">
+          <p className="mb-2 line-clamp-2 text-[12px] sm:text-[13px] leading-[1.5] text-white/75">
             <span className="mr-1 font-semibold text-white">{post.handle}</span>
             {post.footerCopy}
           </p>
@@ -229,19 +229,19 @@ export default function PublishedForYou() {
       <header className="relative z-40 mx-auto max-w-[1024px] text-center">
         <div className="mb-6 flex items-center justify-center gap-4">
           <span className="hidden h-px w-20 bg-gradient-to-r from-transparent to-blue-200 sm:block" />
-          <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.08)]">
+          <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.08)]">
             <span className="text-base leading-none">✦</span>
             OMNICHANNEL PRESENCE
           </p>
           <span className="hidden h-px w-20 bg-gradient-to-l from-transparent to-blue-200 sm:block" />
         </div>
 
-        <h2 className="title mt-4 font-medium leading-[1.08] tracking-[-0.065em]">
+        <h2 className="title mt-4 leading-[1.08]">
           Everything You Need to Manage Your
           <span className="text-[var(--primary-color)]"> Online Visibility in One Place</span>
         </h2>
 
-        <p className="desc mx-auto mt-5 leading-[1.65] text-[#c2c0c9]">
+        <p className="desc mx-auto mt-5 leading-[1.65] text-[#fff]">
           Foundly.ai combines AI-powered SEO, content creation, local search activities and social media publishing in one connected platform. Rather than managing every task through a separate workflow, businesses can use the platform to support the activities involved in building and maintaining their digital presence.
         </p>
       </header>

@@ -37,16 +37,16 @@ export default function FAQ() {
         <header className="mx-auto mb-[42px] max-w-[991px] text-center">
           <div className="mb-6 flex items-center justify-center gap-4">
             <span className="hidden h-px w-20 bg-gradient-to-r from-transparent to-blue-200 sm:block" />
-            <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.08)]">
+            <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.08)]">
               <span className="text-base leading-none">✦</span>
               NEED HELP?
             </p>
             <span className="hidden h-px w-20 bg-gradient-to-l from-transparent to-blue-200 sm:block" />
           </div>
-          <h2 className="title mt-4 font-medium leading-[1.08] tracking-[-0.065em]">
+          <h2 className="title mt-4 leading-[1.08]">
             Frequently Asked Questions About <span className="text-[var(--primary-color)]">Foundly.ai</span>
           </h2>
-          <p className="desc mx-auto mt-5 leading-[1.65] text-[#737381]">
+          <p className="desc mx-auto mt-5 leading-[1.65] text-[var(--text-color)]">
             Find answers to common questions about Foundly.ai, its SEO workflows, integrations and publishing features.
           </p>
         </header>
@@ -74,7 +74,7 @@ export default function FAQ() {
                     onClick={() =>
                       setOpenIndex(isOpen ? null : index)
                     }
-                    className="flex min-h-[55px] w-full items-center justify-between gap-5 px-[19px] py-4 text-left text-[16px] sm:text-[20px] font-medium leading-[1.4] tracking-[-0.025em] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--primary-color)]"
+                    className="flex min-h-[55px] w-full items-center justify-between gap-5 px-[19px] py-4 text-left text-[17px] sm:text-[20px] font-medium leading-[1.4] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--primary-color)]"
                   >
                     <span>{item.question}</span>
                     <span className="shrink-0 text-[var(--primary-color)]">
@@ -92,7 +92,7 @@ export default function FAQ() {
                     id={answerId}
                     role="region"
                     aria-labelledby={`foundly-faq-question-${index}`}
-                    className="px-[19px] pb-[18px] text-[12px] sm:text-[16px] leading-[1.65] text-[#424258]"
+                    className="px-[19px] pb-[18px] text-[14px] sm:text-[17px] leading-[1.65] text-[var(--text-color)]"
                   >
                     {item.answer}
                   </div>
@@ -105,7 +105,7 @@ export default function FAQ() {
         {/* Consultation callout */}
         <div className="mt-[9px] flex items-center justify-between gap-4 rounded-[14px] border border-[#d9d2ff] bg-[var(--primary-color)] px-[19px] py-[17px]">
           <div className="min-w-0">
-            <strong className="block text-[16px] sm:text-[20px] font-medium tracking-[-0.025em] text-white">
+            <strong className="block text-[16px] sm:text-[20px] font-medium text-white">
               Spend Less Time Managing Marketing.
             </strong>
             <Link

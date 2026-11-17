@@ -88,14 +88,14 @@ export default function CTA() {
           <div className="mt-[39px] max-w-[950px]">
             <h2
               id="foundly-closing-title"
-              className="text-[38px] font-medium leading-[1.12] tracking-[-0.065em] sm:text-[48px] lg:text-[58px]"
+              className="title mt-4 leading-[1.08]"
             >
               <span className="block">Spend Less Time Managing Marketing.</span>
               <span className="mt-2 block bg-gradient-to-r from-[#c49af8] to-[var(--primary-color)] bg-clip-text text-transparent">
                 More Time Growing Your Business.
               </span>
             </h2>
-            <p className="mx-auto mt-[23px] max-w-[750px] text-[16px] sm:text-[20px] leading-[1.4] text-[#c8c7d2] sm:text-[16px]">
+            <p className="desc mt-5 leading-[1.4] text-[#fff]">
               Building a consistent online presence involves ongoing work across search, content and social media. Foundly.ai brings essential marketing workflows together to help you discover opportunities, create relevant content and manage your digital presence through one connected platform. Make your next step towards a more organized approach to online visibility.
             </p>
 

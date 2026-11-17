@@ -112,7 +112,7 @@ function SearchCard({ result }: { result: SearchResult }) {
       {/* Search query bar */}
       <div className="flex h-[41px] min-w-0 items-center gap-[9px] rounded-full border border-[#e9e9ee] px-[13px] shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
         <GoogleMark />
-        <span className="min-w-0 flex-1 truncate text-[12px] sm:text-[15px] font-medium tracking-[-0.025em] text-[#17171c]">
+        <span className="min-w-0 flex-1 truncate text-[12px] sm:text-[15px] font-medium text-[var(--text-color)]">
           {result.query}
         </span>
         <FiSearch className="h-[15px] w-[15px] shrink-0 text-[#9393a0]" />
@@ -130,20 +130,20 @@ function SearchCard({ result }: { result: SearchResult }) {
           />
         </span>
         <div className="flex min-w-0 flex-col gap-[3px]">
-          <strong className="truncate text-[12px] sm:text-[14px] font-medium leading-[1.2] tracking-[-0.035em] text-[#202027]">
+          <strong className="truncate text-[12px] sm:text-[14px] font-medium leading-[1.2] text-[var(--text-color)]">
             {result.brand}
           </strong>
-          <span className="truncate text-[10px] sm:text-[12px] leading-[1.2] text-[#777783]">
+          <span className="truncate text-[10px] sm:text-[12px] leading-[1.2] text-[var(--text-color)]">
             {result.domain}
           </span>
         </div>
       </div>
 
       {/* Search result title and description */}
-      <h3 className="mt-3 line-clamp-2 min-h-[48px] text-[17px] sm:text-[20px] font-normal leading-[1.32] tracking-[-0.045em] text-[var(--primary-color)]">
+      <h3 className="mt-3 line-clamp-2 min-h-[48px] text-[17px] sm:text-[20px] font-normal leading-[1.32] text-[var(--primary-color)]">
         {result.title}
       </h3>
-      <p className="mt-3 line-clamp-3 min-h-[53px] text-[12px] sm:text-[14px] leading-[1.55] tracking-[-0.015em] text-[#555563]">
+      <p className="mt-3 line-clamp-3 min-h-[53px] text-[12px] sm:text-[14px] leading-[1.55] text-[var(--text-color)]">
         {result.description}
       </p>
 
@@ -162,7 +162,7 @@ function SearchCard({ result }: { result: SearchResult }) {
 
       {/* Published content metrics and case study link */}
       <div className="mt-auto border-t border-[#ececf0] pt-[12px]">
-        <p className="truncate text-[11px] sm:text-[13px] font-medium tracking-[-0.025em] text-[#202027]">
+        <p className="truncate text-[11px] sm:text-[13px] font-medium text-[var(--text-color)]">
           {result.stats}
         </p>
         <Link
@@ -223,13 +223,13 @@ const GoogleAI = () => {
       <header className="relative z-40 mx-auto max-w-[1199px] text-center">
         <div className="mb-6 flex items-center justify-center gap-4">
           <span className="hidden h-px w-20 bg-gradient-to-r from-transparent to-blue-200 sm:block" />
-          <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.08)]">
+          <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.08)]">
             <span className="text-base leading-none">✦</span>
             AI SEARCH READY
           </p>
           <span className="hidden h-px w-20 bg-gradient-to-l from-transparent to-blue-200 sm:block" />
         </div>
-        <h2 className="title mt-4 font-medium leading-[1.08] tracking-[-0.065em]">
+        <h2 className="title mt-4 leading-[1.08]">
           Get Your Business Ready for   {' '}
           <span className="block font-normal text-[var(--primary-color)]">the Future of Search</span>
         </h2>
@@ -253,7 +253,7 @@ const GoogleAI = () => {
           ))}
         </div>
 
-        <p className="desc mx-auto mt-5 leading-[1.65] text-[#737381]">Customers are no longer discovering businesses exclusively through traditional search engine results. AI-powered platforms are also becoming part of how people research services, compare options and find answers to their questions.
+        <p className="desc mx-auto mt-5 leading-[1.65] text-[var(--text-color)]">Customers are no longer discovering businesses exclusively through traditional search engine results. AI-powered platforms are also becoming part of how people research services, compare options and find answers to their questions.
         This creates another consideration for businesses: how does your brand appear when potential customers use AI tools to find what they need?
         Foundly.ai supports your efforts to build a stronger presence across this changing search environment.
         </p>

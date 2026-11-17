@@ -32,24 +32,24 @@ const Grow = () => {
     <section
       id="steps"
       aria-labelledby="foundly-steps-title"
-      className="w-full overflow-hidden bg-[#faf9ff] px-5 py-16 text-[#111116] sm:px-8 sm:py-20 lg:px-10 lg:pb-24 lg:pt-[94px]"
+      className="w-full overflow-hidden bg-[#faf9ff] px-5 py-16 text-[var(--text-color2)] sm:px-8 sm:py-20 lg:px-10 lg:pb-24 lg:pt-[94px]"
     >
       {/* Section heading */}
-      <header className="relative z-40 mx-auto max-w-[820px] text-center">
+      <header className="relative z-40 mx-auto max-w-[1024px] text-center">
         <div className="mb-6 flex items-center justify-center gap-4">
           <span className="hidden h-px w-20 bg-gradient-to-r from-transparent to-blue-200 sm:block" />
-          <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.08)]">
+          <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.08)]">
             <span className="text-base leading-none">✦</span>
             EASY AUTOMATION
           </p>
           <span className="hidden h-px w-20 bg-gradient-to-l from-transparent to-blue-200 sm:block" />
         </div>
 
-        <h2 className="title mt-4 font-medium leading-[1.08] tracking-[-0.065em]">
+        <h2 className="title mt-4 leading-[1.08]">
           From Setup to SEO Automation in a  {" "}
           <span className="font-normal text-[var(--primary-color)]">Few Simple Steps</span>
         </h2>
-        <p className="desc mx-auto mt-5 leading-[1.65] text-[#737381]">
+        <p className="desc mx-auto mt-5 leading-[1.65] text-[var(--text-color)]">
           Foundly.ai is designed to bring essential marketing activities into a connected workflow. Here is how the process can be presented to visitors.
         </p>
       </header>
@@ -70,10 +70,10 @@ const Grow = () => {
           </div>
 
           <div className="relative max-w-[340px]">
-            <h3 className="mt-[2px] text-[20px] font-medium leading-tight tracking-[-0.045em] sm:text-[25px]">
+            <h3 className="mt-[2px] text-[20px] font-medium leading-tight sm:text-[25px]">
               1. Connect Your Business
             </h3>
-            <p className="mx-auto mt-[11px] text-[14px] leading-[1.65] text-[#737381] sm:text-[16px]">
+            <p className="mx-auto mt-[11px] text-[14px] leading-[1.65] text-[var(--text-color)] sm:text-[17px]">
               Add your website and relevant business information. This gives the platform the context it needs to support your content and SEO workflows.
             </p>
           </div>
@@ -92,10 +92,10 @@ const Grow = () => {
           </div>
 
           <div className="relative max-w-[340px]">
-            <h3 className="mt-[2px] text-[20px] font-medium leading-tight tracking-[-0.045em] sm:text-[22px]">
+            <h3 className="mt-[2px] text-[20px] font-medium leading-tight sm:text-[22px]">
               2. Discover Opportunities
             </h3>
-            <p className="mx-auto mt-[11px] text-[14px] leading-[1.65] text-[#737381] sm:text-[16px]">
+            <p className="mx-auto mt-[11px] text-[14px] leading-[1.65] text-[var(--text-color)] sm:text-[17px]">
               Identify relevant keywords, topics and areas where your website's content and online visibility can be improved.
             </p>
           </div>
@@ -114,10 +114,10 @@ const Grow = () => {
           </div>
 
           <div className="relative max-w-[340px]">
-            <h3 className="mt-[2px] text-[20px] font-medium leading-tight tracking-[-0.045em] sm:text-[22px]">
+            <h3 className="mt-[2px] text-[20px] font-medium leading-tight sm:text-[22px]">
               3. Create and Optimize
             </h3>
-            <p className="mx-auto mt-[11px] text-[14px] leading-[1.65] text-[#737381] sm:text-[16px]">
+            <p className="mx-auto mt-[11px] text-[14px] leading-[1.65] text-[var(--text-color)] sm:text-[17px]">
               Use the available AI-powered tools to develop search-focused content and carry out supported website optimization activities.
             </p>
           </div>
@@ -136,10 +136,10 @@ const Grow = () => {
           </div>
 
           <div className="relative max-w-[340px]">
-            <h3 className="mt-[2px] text-[20px] font-medium leading-tight tracking-[-0.045em] sm:text-[22px]">
+            <h3 className="mt-[2px] text-[20px] font-medium leading-tight sm:text-[22px]">
               4. Publish and Manage
             </h3>
-            <p className="mx-auto mt-[11px] text-[14px] leading-[1.65] text-[#737381] sm:text-[16px]">
+            <p className="mx-auto mt-[11px] text-[14px] leading-[1.65] text-[var(--text-color)] sm:text-[17px]">
               Connect supported platforms and manage content publishing across your website and social channels.
             </p>
           </div>
@@ -158,10 +158,10 @@ const Grow = () => {
           </div>
 
           <div className="relative max-w-[340px]">
-            <h3 className="mt-[2px] text-[20px] font-medium leading-tight tracking-[-0.045em] sm:text-[22px]">
+            <h3 className="mt-[2px] text-[20px] font-medium leading-tight sm:text-[22px]">
               5. Monitor Performance
             </h3>
-            <p className="mx-auto mt-[11px] text-[14px] leading-[1.65] text-[#737381] sm:text-[16px]">
+            <p className="mx-auto mt-[11px] text-[14px] leading-[1.65] text-[var(--text-color)] sm:text-[17px]">
               Review available performance information to understand how your online visibility is progressing and identify areas that may need further attention.
             </p>
           </div>

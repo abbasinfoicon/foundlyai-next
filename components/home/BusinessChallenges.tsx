@@ -29,17 +29,17 @@ function InfoCard({ item, index }: { item: CardItem; index: number }) {
 
       <div className="relative z-10 flex w-full items-start gap-5 sm:gap-7">
         <div className={`flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-[20px] border shadow-[0_8px_20px_rgba(67,105,220,0.08)] transition-transform duration-300 group-hover:scale-105 ${accent === "violet"
-            ? "border-violet-100 bg-gradient-to-br from-violet-50 to-purple-100 text-violet-600"
-            : "border-blue-100 bg-gradient-to-br from-blue-50 to-sky-100 text-blue-600"
+          ? "border-violet-100 bg-gradient-to-br from-violet-50 to-purple-100 text-violet-600"
+          : "border-blue-100 bg-gradient-to-br from-blue-50 to-sky-100 text-blue-600"
           }`}>
           <Icon className="h-9 w-9" strokeWidth={1.8} />
         </div>
 
         <div className="min-w-0 flex-1 pr-8">
-          <h3 className="text-[19px] font-bold leading-[1.25] tracking-[-0.035em] text-[#101735] sm:text-[23px]">
+          <h3 className="text-[19px] font-bold leading-[1.25] text-[#101735] sm:text-[23px]">
             {item.title}
           </h3>
-          <p className="mt-4 text-[15px] leading-[1.6] text-[#485477] sm:text-[17px]">
+          <p className="mt-4 text-[15px] leading-[1.6] text-[var(--text-color)] sm:text-[17px]">
             {item.body}
           </p>
         </div>
@@ -68,14 +68,17 @@ export default function BusinessChallenges() {
       <div aria-hidden="true" className="pointer-events-none absolute -right-32 top-0 -z-10 h-[340px] w-[340px] rounded-full bg-violet-100/60 blur-[100px]" />
       <div className="mx-auto max-w-[1430px]">
         <header className="mx-auto mb-10 max-w-[850px] text-center sm:mb-14">
-          <div className="mb-5 flex items-center justify-center gap-4">
-            <span className="hidden h-px w-16 bg-gradient-to-r from-transparent to-blue-200 sm:block" />
-            <span className="inline-flex items-center gap-2 rounded-full border border-[var(--primary-color)]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2 text-[11px] font-bold uppercase tracking-[0.1em] text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.07)] sm:text-[13px]">✦ A CONNECTED APPROACH</span>
-            <span className="hidden h-px w-16 bg-gradient-to-l from-transparent to-blue-200 sm:block" />
+          <div className="mb-6 flex items-center justify-center gap-4">
+            <span className="hidden h-px w-20 bg-gradient-to-r from-transparent to-blue-200 sm:block" />
+            <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.08)]">
+              <span className="text-base leading-none">✦</span>
+              A CONNECTED APPROACH
+            </p>
+            <span className="hidden h-px w-20 bg-gradient-to-l from-transparent to-blue-200 sm:block" />
           </div>
-          <h2 className="text-[32px] font-medium leading-[1.12] tracking-[-0.055em] text-[#111116] sm:text-[44px] lg:text-[52px]">Growing Online Takes More Than <span className="text-[var(--primary-color)]">Just Having a Website</span></h2>
-          <p className="mx-auto mt-3 max-w-[780px] text-[15px] leading-[1.75] text-[#737381] sm:text-[18px]">Your website may explain what your business offers, but potential customers still need to find it when they search for relevant products, services or information.</p>
-          <p className="mx-auto mt-5 max-w-[780px] text-[15px] leading-[1.75] text-[var(--primary-color)] sm:text-[18px]">Maintaining that visibility requires regular work across several areas:</p>
+          <h2 className="title leading-[1.08]">Growing Online Takes More Than <span className="text-[var(--primary-color)]">Just Having a Website</span></h2>
+          <p className="desc mt-3 leading-[1.65] text-[var(--text-color)]">Your website may explain what your business offers, but potential customers still need to find it when they search for relevant products, services or information.</p>
+          <p className="desc mt-5 leading-[1.65] text-[var(--primary-color)]">Maintaining that visibility requires regular work across several areas:</p>
         </header>
 
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3 sm:gap-6">

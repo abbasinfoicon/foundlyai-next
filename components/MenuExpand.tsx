@@ -1,4 +1,4 @@
- "use client"
+"use client"
 
 import React from "react"
 import type { MegaMenuType } from "./Header"
@@ -18,18 +18,61 @@ type MenuItem = {
 }
 
 const productItems: MenuItem[] = [
-  { title: "Social Media", description: "Posts written, designed and scheduled for every channel.", href: "/", icon: "share" },
-  { title: "AI SEO Agent", description: "Plan, create, publish, and measure SEO work.", href: "/", icon: "bot" },
-  { title: "AI Blog Writer", description: "Create SEO-ready articles from keyword demand.", href: "/", icon: "pen" },
-  { title: "Local SEO", description: "Improve Google Maps, profile, and local search visibility.", href: "/", icon: "pin" },
-  { title: "Local SEO Services", description: "We run your local SEO for you. Plans, results and pricing.", href: "/", icon: "pin" },
-  { title: "Backlinks", description: "Connect authority signals to content strategy.", href: "/", icon: "link" },
-  { title: "Auto Linking Tool", description: "Find and apply useful internal link opportunities.", href: "/", icon: "nodes" },
-  { title: "Autoblog", description: "Run a controlled SEO blog publishing workflow.", href: "/", icon: "calendar" },
-  { title: "Keyword Research Tool", description: "Turn keyword ideas into publishable SEO actions.", href: "/", icon: "search" },
-  { title: "E-commerce & Shopify", description: "Support product and collection SEO workflows.", href: "/", icon: "shop" },
-  { title: "Rank on ChatGPT", description: "Build clearer sources for ChatGPT visibility.", href: "/", icon: "spark" },
-]
+  {
+    title: "AI Blog Writer",
+    description: "Create SEO-optimized articles with AI-powered content generation.",
+    href: "#",
+    icon: "pen",
+  },
+  {
+    title: "Social Media Automation",
+    description: "Create, manage and schedule posts across X, Facebook, Instagram, Threads and LinkedIn.",
+    href: "#",
+    icon: "share",
+  },
+  {
+    title: "Rank on AI Platforms",
+    description: "Improve your brand visibility across ChatGPT, Claude, Gemini and other AI platforms.",
+    href: "#",
+    icon: "spark",
+  },
+  {
+    title: "Auto Blog Publishing",
+    description: "Automate your blog publishing workflow and maintain a consistent content schedule.",
+    href: "#",
+    icon: "calendar",
+  },
+  {
+    title: "Local SEO",
+    description: "Improve local search visibility and manage your Google Business Profile.",
+    href: "#",
+    icon: "pin",
+  },
+  {
+    title: "Keyword Research Tool",
+    description: "Discover relevant keywords, search trends and new content opportunities.",
+    href: "#",
+    icon: "search",
+  },
+  {
+    title: "Local Business",
+    description: "Manage your business information and strengthen your online local presence.",
+    href: "#",
+    icon: "shop",
+  },
+  {
+    title: "Citations & Competitors",
+    description: "Monitor business citations and understand your competitors' online presence.",
+    href: "#",
+    icon: "link",
+  },
+  {
+    title: "Sentiment & Brand Risk",
+    description: "Monitor brand sentiment, customer perception and potential reputation risks.",
+    href: "#",
+    icon: "bot",
+  },
+];
 
 const resourceItems: MenuItem[] = [
   { title: "Blog", description: "Plain-English guides to getting found online.", href: "/", icon: "book" },
@@ -84,28 +127,28 @@ const MenuExpand = ({ activeMenu, onSelectMenu, onClose }: MenuExpandProps) => {
         <div className="grid gap-6 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-8">
           {/* Explore sidebar */}
           <aside className="flex flex-col border-b border-[#e9e6f2] pb-5 lg:min-h-[510px] lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8">
-            <h2 className="mb-4 px-3 text-[12px] font-normal uppercase tracking-[0.12em] text-[#92909f]">Explore</h2>
+            <h2 className="mb-4 px-3 text-[12px] font-normal uppercase text-[#000]">Explore</h2>
             <div className="space-y-1">
               <button
                 type="button"
                 onMouseEnter={() => onSelectMenu("products")}
-                onClick={() => onSelectMenu(isProducts ? null : "products")}
-                className={`flex w-full items-center justify-between rounded-[14px] px-3 py-3 text-left transition-colors ${isProducts ? "bg-[#f0edff] text-[#171525]" : "text-[#252332] hover:bg-[#f8f7ff]"}`}
+                onClick={() => onSelectMenu("products")}
+                className={`flex w-full items-center justify-between rounded-[14px] px-3 py-3 text-left transition-colors ${isProducts ? "bg-[#f0edff] text-[var(--text-color)]" : "text-[#252332] hover:bg-[#f8f7ff]"}`}
               >
-                <span><span className="block text-[15px] font-medium">Products</span><span className="mt-0.5 block text-[13px] text-[#828091]">Get found and keep posting</span></span>
-                <svg className={`h-4 w-4 shrink-0 ${isProducts ? "text-[#6958ff]" : "text-[#aaa8b8]"}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
+                <span><span className="block text-[15px] font-bold text-[var(--primary-color)]">Products</span><span className="mt-0.5 block text-[13px] text-[var(--text-color)]">Get found and keep posting</span></span>
+                <svg className={`h-4 w-4 shrink-0 ${isProducts ? "text-[var(--primary-color)]" : "text-[#aaa8b8]"}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
               </button>
               <button
                 type="button"
                 onMouseEnter={() => onSelectMenu("resources")}
-                onClick={() => onSelectMenu(isProducts ? "resources" : null)}
-                className={`flex w-full items-center justify-between rounded-[14px] px-3 py-3 text-left transition-colors ${!isProducts ? "bg-[#f0edff] text-[#171525]" : "text-[#252332] hover:bg-[#f8f7ff]"}`}
+                onClick={() => onSelectMenu("resources")}
+                className={`flex w-full items-center justify-between rounded-[14px] px-3 py-3 text-left transition-colors ${!isProducts ? "bg-[#f0edff] text-[var(--text-color)]" : "text-[#252332] hover:bg-[#f8f7ff]"}`}
               >
-                <span><span className="block text-[15px] font-medium">Resources</span><span className="mt-0.5 block text-[13px] text-[#828091]">Guides, stories and help</span></span>
-                <svg className={`h-4 w-4 shrink-0 ${!isProducts ? "text-[#6958ff]" : "text-[#aaa8b8]"}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
+                <span><span className="block text-[15px] font-bold text-[var(--primary-color)]">Resources</span><span className="mt-0.5 block text-[13px] text-[var(--text-color)]">Guides, stories and help</span></span>
+                <svg className={`h-4 w-4 shrink-0 ${!isProducts ? "text-[var(--primary-color)]" : "text-[#aaa8b8]"}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
               </button>
-              <Link href="/" onClick={onClose} className="flex w-full items-center justify-between rounded-[14px] px-3 py-3 text-left text-[#252332] transition-colors hover:bg-[#f8f7ff]">
-                <span><span className="block text-[15px] font-medium">Pricing</span><span className="mt-0.5 block text-[13px] text-[#828091]">Simple plans per website</span></span>
+              <Link href="/" onClick={onClose} className="flex w-full items-center justify-between rounded-[14px] px-3 py-3 text-left text-[#252332] transition-colors hover:bg-[#f8f7ff] mb-5">
+                <span><span className="block text-[15px] font-bold text-[var(--primary-color)]">Pricing</span><span className="mt-0.5 block text-[13px] text-[var(--text-color)]">Simple plans per website</span></span>
                 <svg className="h-4 w-4 shrink-0 text-[#aaa8b8]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14m-7-7 7 7-7 7" /></svg>
               </Link>
             </div>
@@ -115,17 +158,17 @@ const MenuExpand = ({ activeMenu, onSelectMenu, onClose }: MenuExpandProps) => {
                 <div className="mb-3 flex -space-x-1.5">
                   {["G", "◎", "✦", "✳", "◉"].map((brand, index) => <span key={brand + index} className="flex h-8 w-8 items-center justify-center rounded-full border border-[#e9e6f3] bg-white text-[12px] font-semibold text-[var(--primary-color)] shadow-sm">{brand}</span>)}
                 </div>
-                <span className="text-[11px] font-medium uppercase tracking-[0.12em] text-[#6958ff]">AI Search</span>
-                <strong className="mt-1 block text-[14px] font-medium text-[#171525]">Get named in AI answers</strong>
-                <span className="mt-1 block text-[12px] leading-[1.55] text-[#737181]">How ChatGPT, Gemini and Google's AI pick who to recommend.</span>
+                <span className="text-[11px] font-medium uppercase text-[var(--primary-color)]">AI Search</span>
+                <strong className="mt-1 block text-[14px] font-medium text-[var(--text-color)]">Get named in AI answers</strong>
+                <span className="mt-1 block text-[12px] leading-[1.55] text-[var(--text-color)]">How ChatGPT, Gemini and Google's AI pick who to recommend.</span>
                 <span className="mt-3 flex items-center gap-2 text-[12px] font-medium text-[var(--primary-color)]">See how to rank on ChatGPT <ArrowRight /></span>
               </Link>
             ) : (
               <Link href="/" className="mt-6 rounded-[17px] border border-[#e3ddff] bg-gradient-to-br from-[#fbfaff] to-white p-4 transition hover:border-[#c9beff] lg:mt-auto">
                 <div className="mb-3 flex flex-wrap gap-1.5"><span className="rounded-full border border-[#e5e0ff] bg-white px-2.5 py-1 text-[10px] text-[#5b586d]">Backlink</span><span className="rounded-full border border-[#e5e0ff] bg-white px-2.5 py-1 text-[10px] text-[#5b586d]">Map pack</span><span className="rounded-full border border-[#e5e0ff] bg-white px-2.5 py-1 text-[10px] text-[#5b586d]">AI Overview</span></div>
-                <span className="text-[11px] font-medium uppercase tracking-[0.12em] text-[#6958ff]">New to SEO?</span>
-                <strong className="mt-1 block text-[15px] font-medium text-[#171525]">Start with the glossary</strong>
-                <span className="mt-1 block text-[13px] leading-[1.55] text-[#737181]">SEO and AI search words, explained in plain English.</span>
+                <span className="text-[11px] font-medium uppercase text-[var(--primary-color)]">New to SEO?</span>
+                <strong className="mt-1 block text-[15px] font-medium text-[var(--text-color)]">Start with the glossary</strong>
+                <span className="mt-1 block text-[13px] leading-[1.55] text-[var(--text-color)]">SEO and AI search words, explained in plain English.</span>
                 <span className="mt-3 flex items-center gap-2 text-[13px] font-medium text-[var(--primary-color)]">Open the glossary <ArrowRight /></span>
               </Link>
             )}
@@ -139,17 +182,17 @@ const MenuExpand = ({ activeMenu, onSelectMenu, onClose }: MenuExpandProps) => {
           {/* Dynamic right-side panel */}
           <section className="min-w-0" aria-label={isProducts ? "Product features" : "Resources"}>
             <div className="mb-5 flex items-center justify-between px-1">
-              <h2 className="text-[12px] font-normal uppercase tracking-[0.12em] text-[#92909f]">{isProducts ? "Features" : "Resources"}</h2>
+              <h2 className="text-[12px] font-normal uppercase text-[#000]">{isProducts ? "Features" : "Resources"}</h2>
               {!isProducts && <Link href="/" className="flex items-center gap-1 text-[12px] font-medium text-[var(--primary-color)] hover:text-[#4e3fe8]">All articles <ArrowRight /></Link>}
             </div>
 
             <div className="grid gap-x-5 gap-y-4 sm:grid-cols-2">
               {items.map((item) => (
                 <Link key={item.title} href={item.href} className="group flex min-w-0 items-start gap-3 rounded-xl p-1.5 transition-colors hover:bg-[#faf9ff]">
-                  <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#e9e7f0] bg-white text-[#6958ff] transition-colors group-hover:border-[#d7d0ff] group-hover:bg-[#f7f5ff]"><Icon name={item.icon} /></span>
+                  <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#e9e7f0] bg-white text-[var(--primary-color)] transition-colors group-hover:border-[#d7d0ff] group-hover:bg-[#f7f5ff]"><Icon name={item.icon} /></span>
                   <span className="min-w-0 pt-0.5">
-                    <strong className="block text-[14px] font-medium leading-5 text-[#191824]">{item.title}</strong>
-                    <span className="mt-0.5 block text-[12px] leading-[1.45] text-[#737181]">{item.description}</span>
+                    <strong className="block text-[14px] font-bold leading-5 text-[#191824]">{item.title}</strong>
+                    <span className="mt-0.5 block text-[12px] sm:text-[13px] leading-[1.45] text-[var(--text-color)]">{item.description}</span>
                   </span>
                 </Link>
               ))}
@@ -158,18 +201,18 @@ const MenuExpand = ({ activeMenu, onSelectMenu, onClose }: MenuExpandProps) => {
             {isProducts ? (
               <Link href="/" className="mt-5 flex flex-col gap-4 rounded-[16px] border border-[#dcd4ff] bg-gradient-to-r from-[#f7f5ff] via-white to-[#fcfbff] px-4 py-4 transition hover:border-[#bfb1ff] sm:flex-row sm:items-center sm:justify-between sm:px-5">
                 <span className="min-w-0">
-                  <span className="flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-[0.12em] text-[#6958ff]"><Icon name="spark" /> Limited-time offer</span>
+                  <span className="flex items-center gap-1.5 text-[11px] font-medium uppercase text-[var(--primary-color)]"><Icon name="spark" /> Limited-time offer</span>
                   <strong className="mt-1 block text-[16px] font-medium text-[#191824]">SEO + Social Media for $49 a month</strong>
-                  <span className="mt-1 block text-[12px] text-[#737181]">Locked in for as long as you stay subscribed</span>
+                  <span className="mt-1 block text-[12px] text-[var(--text-color)]">Locked in for as long as you stay subscribed</span>
                 </span>
                 <span className="flex shrink-0 items-center justify-between gap-4 sm:flex-col sm:items-end sm:gap-2">
-                  <span className="flex items-baseline gap-1.5 whitespace-nowrap"><s className="text-[13px] text-[#9a98a5]">$149</s><strong className="text-[26px] font-semibold leading-none tracking-tight text-[#171525]">$49</strong><span className="text-[11px] text-[#737181]">USD / month</span></span>
+                  <span className="flex items-baseline gap-1.5 whitespace-nowrap"><s className="text-[13px] text-[#9a98a5]">$149</s><strong className="text-[26px] font-semibold leading-none tracking-tight text-[var(--text-color)]">$49</strong><span className="text-[11px] text-[var(--text-color)]">USD / month</span></span>
                   <span className="inline-flex h-9 items-center justify-center gap-2 rounded-full bg-[var(--primary-color)] px-4 text-[13px] font-semibold text-white shadow-[0_5px_12px_rgba(105,88,245,0.2)]">See pricing <ArrowRight /></span>
                 </span>
               </Link>
             ) : (
               <div className="mt-5 rounded-[16px] border border-[#ebe7f7] bg-[#fcfbff] px-4 py-3">
-                <div className="mb-3 flex items-center justify-between"><span className="text-[12px] font-normal uppercase tracking-[0.12em] text-[#92909f]">Featured guides</span><Link href="/blog" className="text-[12px] font-medium text-[var(--primary-color)]">All articles →</Link></div>
+                <div className="mb-3 flex items-center justify-between"><span className="text-[12px] font-normal uppercase text-[#000]">Featured guides</span><Link href="/blog" className="text-[12px] font-medium text-[var(--primary-color)]">All articles →</Link></div>
                 <div className="grid gap-3 md:grid-cols-3">
                   <Link href="/" className="flex items-center gap-2.5 rounded-lg p-1 hover:bg-white"><span className="flex h-10 w-12 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[#5c4ce8] to-[#9b8cff] text-lg text-white">◎</span><span><span className="block text-[11px] text-[#8a8798]">GEO · 13 min read</span><strong className="mt-0.5 block text-[12px] font-medium leading-[1.35] text-[#191824]">How to get cited by ChatGPT and Google AI</strong></span></Link>
                   <Link href="/" className="flex items-center gap-2.5 rounded-lg p-1 hover:bg-white"><span className="flex h-10 w-12 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[#168f8b] to-[#5dd0bd] text-lg text-white">⌖</span><span><span className="block text-[11px] text-[#8a8798]">Local SEO · 10 min read</span><strong className="mt-0.5 block text-[12px] font-medium leading-[1.35] text-[#191824]">Local SEO automation for your Google Business Profile</strong></span></Link>

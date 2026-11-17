@@ -213,20 +213,20 @@ export default function ProvenImpact() {
   }), []);
 
   return (
-    <section id="results-proof" aria-labelledby="measured-results-title" className="mr-results-section w-full overflow-hidden bg-[#f3f6ff] bg-contain bg-right-top bg-no-repeat px-4 pb-[76px] pt-[84px] text-[var(--primary-color)] sm:px-6 lg:px-8" style={{ backgroundImage: "url('/assets/image/bg/chart-bg.webp')" }}>
+    <section id="results-proof" aria-labelledby="measured-results-title" className="mr-results-section w-full overflow-hidden bg-[#f3f6ff] bg-contain bg-right-top bg-no-repeat px-4 pb-[76px] pt-[84px] text-[var(--text-color2)] sm:px-6 lg:px-8" style={{ backgroundImage: "url('/assets/image/bg/chart-bg.webp')" }}>
       {/* Header intentionally unchanged */}
-      <header className="mx-auto flex flex-col items-center text-center">
+      <header className="mx-auto flex flex-col items-center text-center max-w-[1199px]">
         <div className="mb-6 flex items-center justify-center gap-4">
           <span className="hidden h-px w-20 bg-gradient-to-r from-transparent to-blue-200 sm:block" />
-          <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.06)]">
+          <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.06)]">
             <span className="text-base leading-none">✦</span>PROVEN IMPACT
           </p>
           <span className="hidden h-px w-20 bg-gradient-to-l from-transparent to-blue-200 sm:block" />
         </div>
-        <h2 className="title mt-4 font-medium leading-[1.08] tracking-[-0.065em]">
+        <h2 className="title mt-4 leading-[1.08]">
           Understand Your SEO <span className="text-[var(--primary-color)] block">Performance and Online Visibility</span>
         </h2>
-        <p className="desc mx-auto mt-5 max-w-[991px] text-center leading-[1.65] text-[#555463]">Managing digital marketing activities is one part of the process. Understanding how those activities perform is equally important. <strong> Foundly.ai</strong> brings available performance information into the wider marketing workflow, helping businesses review their search presence and assess where further improvements may be needed.</p>
+        <p className="desc mt-5 leading-[1.65] text-[var(--text-color)]">Managing digital marketing activities is one part of the process. Understanding how those activities perform is equally important. <strong> Foundly.ai</strong> brings available performance information into the wider marketing workflow, helping businesses review their search presence and assess where further improvements may be needed.</p>
       </header>
 
       <div className="mx-auto mt-[50px] max-w-[1240px]">
@@ -252,8 +252,8 @@ export default function ProvenImpact() {
                     {report.icon}
                   </span>
                   <span className="min-w-0 flex-1">
-                    <strong className="block line-clamp-2 text-[13px] font-semibold leading-[1.2] tracking-[-0.025em] text-[#111a35] sm:text-[14px]">{report.tab}</strong>
-                    <span className="mt-1 block truncate text-[11px] leading-tight text-[#77829f]">{report.description}</span>
+                    <strong className="block line-clamp-2 text-[13px] font-semibold leading-[1.2] text-[#111a35] sm:text-[14px]">{report.tab}</strong>
+                    <span className="mt-1 block truncate text-[11px] leading-tight text-[var(--text-color)]">{report.description}</span>
                   </span>
                 </span>
                 {active && <span className="absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full bg-[#477cff] text-white shadow-lg"><BsArrowRight /></span>}
@@ -261,10 +261,10 @@ export default function ProvenImpact() {
                   <MiniTrend color={trendColors[index]} seed={index + 1} />
                 </span>
                 <span className="mt-auto flex items-center gap-2 pt-2">
-                  <strong className="text-[18px] font-bold tracking-[-0.04em] text-[#111a35]">{metric.value}</strong>
+                  <strong className="text-[18px] font-bold text-[#111a35]">{metric.value}</strong>
                   <span className="rounded-full bg-[#e9fbf2] px-2 py-0.5 text-[10px] font-semibold text-[#07934f]">↑ {metric.change}</span>
                 </span>
-                <span className="text-[11px] text-[#7c87a2]">{metric.label}</span>
+                <span className="text-[11px] text-[var(--text-color)]">{metric.label}</span>
               </button>
             );
           })}
@@ -277,9 +277,9 @@ export default function ProvenImpact() {
           
           <div className="relative z-10 flex flex-wrap items-start justify-between gap-5">
             <div className="min-w-0">
-              <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#245ae2]">Performance overview</p>
-              <h3 className="mt-2 text-[20px] font-bold leading-tight tracking-[-0.045em] text-[var(--primary-color)] sm:text-[25px]">{selected.title}</h3>
-              <p className="mt-2 max-w-[760px] text-[14px] leading-[1.65] text-[#000000] sm:text-[16px]">{selected.description}</p>
+              <p className="text-[11px] font-bold uppercase text-[#245ae2]">Performance overview</p>
+              <h3 className="mt-2 text-[20px] font-bold leading-tight text-[var(--primary-color)] sm:text-[25px]">{selected.title}</h3>
+              <p className="mt-2 max-w-[760px] text-[14px] leading-[1.65] text-[var(--text-color)] sm:text-[17px]">{selected.description}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {selected.tags.map((tag) => <span key={tag} className="inline-flex items-center rounded-full bg-[#e7efff] px-3 py-1.5 text-[11px] font-semibold text-[#2464e9] sm:text-[12px]">{tag}</span>)}
               </div>
@@ -294,7 +294,7 @@ export default function ProvenImpact() {
               <div key={metric.label} className={`relative min-h-[145px] overflow-hidden rounded-[19px] p-5 text-white shadow-[0_10px_25px_rgba(34,126,255,0.18)] sm:p-6 ${index === 0 ? "bg-gradient-to-br from-[#168fff] via-[#3289f7] to-[#245ae2]" : index === 1 ? "bg-gradient-to-br from-[#8151e7] via-[#7041d2] to-[#5d35bb]" : "border border-white bg-white/90 !text-[var(--primary-color)] shadow-[0_8px_22px_rgba(52,70,130,0.08)]"}`}>
                 <div className="absolute -bottom-5 right-3 flex h-28 items-end gap-1.5 opacity-15">{[35, 52, 70, 90].map((height, i) => <span key={i} style={{ height: `${height}px` }} className={`w-[18px] rounded-t-md ${index === 2 ? "bg-[#338cff]" : "bg-white"}`} />)}</div>
                 <div className="relative flex items-center gap-3"><span className={`flex h-[46px] w-[46px] items-center justify-center rounded-full text-[24px] ${index === 2 ? "bg-[#edf3ff] text-[#245ae2]" : "bg-white/20"}`}>{metric.icon}</span><span className="text-[14px] font-semibold">{metric.label}</span></div>
-                <p className="relative mt-3 text-[36px] font-bold leading-none tracking-[-0.06em] sm:text-[41px]">{metric.value}</p>
+                <p className="relative mt-3 text-[36px] font-bold leading-none sm:text-[41px]">{metric.value}</p>
                 <p className={`relative mt-3 inline-flex rounded-full px-3 py-1 text-[11px] font-bold ${index === 2 ? "bg-[#e9fbf2] text-[#078b50]" : "bg-white/95 text-[#078b50]"}`}>↑ {metric.change} <span className="ml-2 font-medium text-[#71809e]">vs previous period</span></p>
               </div>
             ))}
@@ -303,8 +303,8 @@ export default function ProvenImpact() {
           <div className="relative z-10 mt-5 rounded-[20px] border border-white bg-white/90 p-4 shadow-[0_8px_25px_rgba(46,67,125,0.07)] sm:p-6">
             <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
               <div>
-                <h4 className="text-[15px] font-bold text-[#172343]">{selected.chartTitle}</h4>
-                <p className="mt-1 text-[11px] text-[#8a96b0]">Illustrative trend data · Last 12 months</p>
+                <h4 className="text-[14px] sm:text-[17px] font-bold text-[#172343]">{selected.chartTitle}</h4>
+                <p className="mt-1 text-[11px] text-[var(--text-color)]">Illustrative trend data · Last 12 months</p>
               </div>
               <div className="flex flex-wrap items-center gap-4 text-[12px] font-semibold text-[#596789]">
                 <span className="inline-flex items-center gap-2"><i className="h-3 w-3 rounded-full" style={{ backgroundColor: selected.primaryColor }} />{selected.primaryLabel}</span>
@@ -317,7 +317,7 @@ export default function ProvenImpact() {
           </div>
 
           <div className="relative z-10 mt-5 flex flex-wrap items-center justify-between gap-3 px-1">
-            <p className="inline-flex items-center gap-3 text-[12px] text-[#7b86a4] sm:text-[14px]"><span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[20px] text-[#245ae2] shadow">✦</span>Illustrative performance data for demonstration purposes.</p>
+            <p className="inline-flex items-center gap-3 text-[12px] text-[var(--text-color)] sm:text-[14px]"><span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[20px] text-[#245ae2] shadow">✦</span>Illustrative performance data for demonstration purposes.</p>
             <a href="#" className="inline-flex items-center gap-3 rounded-full border border-[#dce7ff] bg-white px-5 py-3 text-[13px] font-bold text-[#1768ff] shadow-[0_5px_18px_rgba(50,110,255,0.12)] transition hover:-translate-y-0.5 hover:shadow-lg sm:text-[15px]">
               Explore performance <FiArrowUpRight className="h-5 w-5" />
             </a>

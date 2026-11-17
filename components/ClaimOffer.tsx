@@ -74,7 +74,7 @@ export default function ClaimOffer() {
 
           <span aria-hidden="true" className="hidden h-[22px] w-px shrink-0 bg-white/20 md:block" />
 
-          <span className="hidden shrink-0 items-center gap-1 rounded-full border border-[#9384ff]/50 bg-[#6958f5]/15 px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.04em] text-[#d8d2ff] sm:inline-flex">
+          <span className="hidden shrink-0 items-center gap-1 rounded-full border border-[#9384ff]/50 bg-[#6958f5]/15 px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold uppercase text-[#d8d2ff] sm:inline-flex">
             <FaWandMagicSparkles className="h-3 w-3" />
             Limited time
           </span>

@@ -7,6 +7,10 @@
   --primary-color: #245ae2;
   --primary-color-2: #6958f5;
 
+  --text-color: #4c4c58;
+  --text-color2: #221d2e;
+
+
   --primary-shadow: rgba(105, 88, 245, 0.28);
   --secondary-color: #0a0a0a;
 
@@ -48,10 +52,12 @@ body {
   font-size: 0.813rem;
   line-height: 1;
   white-space: nowrap;
+  letter-spacing: 0.2rem;
 }
 
 .title {
   font-size: 3.625rem;
+  font-weight: 700;;
 }
 
 .desc {

@@ -68,14 +68,14 @@ const Hero = () => {
   }
 
   return (
-    <section aria-label="Foundly.ai marketing hero" className="w-full overflow-hidden bg-white px-4 pb-8 pt-12 text-[#111116] sm:px-6 sm:pt-14 lg:px-8 lg:pb-10 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/assets/image/bg/hero-bg.webp')" }}>
+    <section aria-label="Foundly.ai marketing hero" className="w-full overflow-hidden bg-white px-4 pb-8 pt-12 text-[var(--text-color2)] sm:px-6 sm:pt-14 lg:px-8 lg:pb-10 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/assets/image/bg/hero-bg.webp')" }}>
       <div className="mx-auto w-full max-w-[1195px]">
         {/* Hero copy */}
         <div className="mx-auto flex max-w-[1140px] flex-col items-center text-center">
           <div className="mb-6 flex items-center justify-center gap-4">
             <span className="hidden h-px w-20 bg-gradient-to-r from-transparent to-blue-200 sm:block" />
 
-            <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.06)]">
+            <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.06)]">
               <span className="text-base leading-none">✦</span>
               Smarter Marketing, Less Effort
             </p>
@@ -83,7 +83,7 @@ const Hero = () => {
             <span className="hidden h-px w-20 bg-gradient-to-l from-transparent to-blue-200 sm:block" />
           </div>
 
-          <h1 className="title mt-4 font-medium leading-[1.08] tracking-[-0.065em]">
+          <h1 className="title mt-4 leading-[1.08]">
             Grow Your Online Visibility with {" "}
             <span className="text-[var(--primary-color)]">AI-Powered SEO and Marketing Automation</span>
           </h1>
@@ -160,10 +160,7 @@ const Hero = () => {
           </div>
 
           <div className="mt-5 space-y-3 text-center">
-            <p className="desc leading-[1.65] text-[#555463]">
-              Managing your online presence takes more than publishing a website and waiting for customers to find it. From researching relevant keywords and creating website content to improving search visibility and maintaining social channels, there are several activities that need consistent attention.
-            </p>
-            <p className="mx-auto max-w-[900px] text-[14px] leading-[1.7] text-[#737381] sm:text-[16px]">
+            <p className="desc leading-[1.65] text-[var(--text-color)]">
               Foundly.ai brings essential SEO and digital marketing workflows together in one platform. Use AI-powered tools to discover search opportunities, create and optimize content, manage publishing and support your brand&apos;s visibility across traditional and AI-powered search experiences.
             </p>
           </div>
@@ -179,7 +176,7 @@ const Hero = () => {
               Explore How It Works <FaArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
-          <span className="mt-2 text-[12px] text-[#8d8b98]">Cancel anytime</span>
+          <span className="mt-2 text-[12px] text-[var(--text-color)]">Cancel anytime</span>
 
           {/* Review source icons */}
           <div className="mt-7 flex items-center -space-x-1.5" aria-label="Review platforms">
@@ -190,7 +187,7 @@ const Hero = () => {
             <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#e8e7ed] bg-white text-[#1688ca] shadow-sm"><FaArrowRight className="h-5 w-5 -rotate-45" /></span>
           </div>
 
-          <div className="mt-2 flex flex-wrap items-center justify-center gap-1.5 text-[15px] text-[#62606d]">
+          <div className="mt-2 flex flex-wrap items-center justify-center gap-1.5 text-[15px] text-[var(--text-color)]">
             <span className="flex items-center gap-0.5 text-[#f5aa00]" aria-label="4.7 out of 5 stars">
               {[0, 1, 2, 3].map((star) => <FaStar key={star} className="h-[13px] w-[13px]" />)}
               <FaStar className="h-[13px] w-[13px] opacity-70" />

@@ -66,10 +66,10 @@ function InfoCard({ item }: { item: CardItem }) {
         </span>
       </div>
 
-      <h3 className="relative z-10 text-[18px] font-bold leading-[1.2] tracking-[-0.035em] text-[#111936] sm:text-[20px]">
+      <h3 className="relative z-10 text-[18px] font-bold leading-[1.2] text-[#111936] sm:text-[20px]">
         {item.title}
       </h3>
-      <p className="relative z-10 mt-3 text-[14px] leading-[1.55] text-[#53617f] sm:text-[16px]">
+      <p className="relative z-10 mt-3 text-[14px] leading-[1.55] text-[var(--text-color)] sm:text-[17px]">
         {item.body}
       </p>
 
@@ -99,20 +99,23 @@ export default function SocialMediaAutomation() {
         {/* Header and hero illustration */}
         <div className="grid items-center gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-5">
           <header className="mx-auto w-full max-w-[760px] text-center lg:mx-0 lg:text-left">
-            <div className="mb-5 flex items-center justify-center gap-4 lg:justify-start">
-              <span className="hidden h-px w-10 bg-gradient-to-r from-transparent to-blue-300 sm:block" />
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#edf4ff] to-white px-5 py-2 text-[11px] font-bold uppercase tracking-[0.1em] text-[#245ae2] shadow-[0_3px_14px_rgba(36,90,226,0.09)] sm:text-[13px]">
-                <span className="text-base">✦</span> SOCIAL PRESENCE
-              </span>
-              <span className="hidden h-px w-10 bg-gradient-to-l from-transparent to-blue-300 sm:block" />
+            <div className="mb-6 flex items-center justify-center gap-4">
+              <span className="hidden h-px w-20 bg-gradient-to-r from-transparent to-blue-200 sm:block" />
+
+              <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.06)]">
+                <span className="text-base leading-none">✦</span>
+                SOCIAL PRESENCE
+              </p>
+
+              <span className="hidden h-px w-20 bg-gradient-to-l from-transparent to-blue-200 sm:block" />
             </div>
 
             {/* Keep heading font sizes and family consistent with the supplied component */}
-            <h2 className="text-[32px] font-medium leading-[1.12] tracking-[-0.055em] text-[#111116] sm:text-[44px] lg:text-[52px]">
+            <h2 className="title mt-4 leading-[1.08]">
               Keep Your Business Active Across{" "}
               <span className="text-[#245ae2]">Social Media</span>
             </h2>
-            <p className="mx-auto mt-5 max-w-[780px] text-[15px] leading-[1.75] text-[#53617f] sm:text-[18px] lg:mx-0">
+            <p className="desc mt-5 leading-[1.65] text-[var(--text-color)]">
               Your website is an important part of your online presence, but customers may also discover and interact with your business through social platforms. Maintaining those channels requires a regular supply of relevant content and a consistent publishing schedule. Foundly.ai helps streamline social media content creation and publishing through connected channels.
             </p>
           </header>

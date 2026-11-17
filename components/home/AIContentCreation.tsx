@@ -42,8 +42,8 @@ function InfoCard({ item }: { item: CardItem }) {
         </span>
         <span className="rounded-full bg-[#E5EFFF] px-4 py-1.5 text-[17px] font-extrabold tracking-tight text-[#1247C8]">{item.number}</span>
       </div>
-      <h3 className="relative z-10 mt-4 max-w-[90%] text-[20px] font-bold leading-[1.12] tracking-[-0.035em] text-[#07133F] sm:text-[24px]">{item.title}</h3>
-      <p className="relative z-10 mt-3 max-w-[92%] pb-16 text-[15px] leading-[1.45] text-[#253454] sm:text-[16px]">{item.body}</p>
+      <h3 className="relative z-10 mt-4 max-w-[90%] text-[20px] font-bold leading-[1.12] text-[#07133F] sm:text-[24px]">{item.title}</h3>
+      <p className="relative z-10 mt-3 max-w-[92%] pb-16 text-[15px] leading-[1.45] text-[var(--text-color)] sm:text-[17px]">{item.body}</p>
       <span className="absolute bottom-7 left-7 z-20 block h-[5px] w-14 rounded-full bg-[#245ae2] shadow-[0_3px_10px_rgba(36,90,226,0.22)] transition-all duration-300 group-hover:w-20" />
       <Image className="absolute bottom-0 right-0 z-10" src={item.image} alt="" width={128} height={116} />
     </article>
@@ -90,14 +90,19 @@ export default function PlatformFeatures() {
     <section className="relative isolate overflow-hidden bg-[#F4F8FF] px-4 py-14 sm:px-6 sm:py-16 lg:px-8 bg-cover bg-bottom bg-no-repeat" style={{backgroundImage:'url(/assets/image/bg/testimonial-bg.webp)'}}>      
       <div className="relative mx-auto max-w-[1400px]">
         <header className="mx-auto mb-10 max-w-[1140px] text-center sm:mb-14">
-          <div className="mb-5 flex items-center justify-center gap-4">
-            <span className="hidden h-px w-16 bg-gradient-to-r from-transparent to-blue-200 sm:block" />
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2 text-[11px] font-bold uppercase tracking-[0.1em] text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.07)] sm:text-[13px]">✦ AI CONTENT CREATION</span>
-            <span className="hidden h-px w-16 bg-gradient-to-l from-transparent to-blue-200 sm:block" />
+          <div className="mb-6 flex items-center justify-center gap-4">
+            <span className="hidden h-px w-20 bg-gradient-to-r from-transparent to-blue-200 sm:block" />
+ 
+            <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.06)]">
+              <span className="text-base leading-none">✦</span>
+              AI CONTENT CREATION
+            </p>
+ 
+            <span className="hidden h-px w-20 bg-gradient-to-l from-transparent to-blue-200 sm:block" />
           </div>
-          <h2 className="text-[32px] font-medium leading-[1.12] tracking-[-0.055em] text-[#111116] sm:text-[44px] lg:text-[52px]">Turn Your SEO Strategy <span className="text-[var(--primary-color)]">Into Consistent Content</span></h2>
-          <p className="mx-auto mt-5 text-[15px] leading-[1.75] text-[#737381] sm:text-[18px]">Creating an article is only one part of content marketing. Businesses also need to identify suitable topics, understand search intent, prepare useful information, optimize the final content and publish it through their website.</p>
-          <p className="mx-auto mt-5 text-[15px] leading-[1.75] text-[var(--primary-color)] sm:text-[18px]">Foundly.ai helps bring these activities into a more connected workflow.</p>
+          <h2 className="title mt-4 leading-[1.08]">Turn Your SEO Strategy <span className="text-[var(--primary-color)]">Into Consistent Content</span></h2>
+          <p className="desc mt-3 leading-[1.65] text-[var(--text-color)]">Creating an article is only one part of content marketing. Businesses also need to identify suitable topics, understand search intent, prepare useful information, optimize the final content and publish it through their website.</p>
+          <p className="desc mt-5 leading-[1.65] text-[var(--primary-color)]">Foundly.ai helps bring these activities into a more connected workflow.</p>
         </header>
 
         <div className="grid items-stretch gap-2 sm:grid-cols-2 xl:grid-cols-4">

@@ -79,10 +79,10 @@ function InfoCard({ item, index }: { item: CardItem; index: number }) {
       </div>
 
       <div className="relative flex flex-1 flex-col px-6 pb-7 pt-4 sm:px-7">
-        <h3 className="text-[19px] font-bold leading-[1.2] tracking-[-0.035em] text-[#111936] sm:text-[21px]">
+        <h3 className="text-[19px] font-bold leading-[1.2] text-[#111936] sm:text-[21px]">
           {item.title}
         </h3>
-        <p className="mt-4 text-[15px] leading-[1.55] text-[#394968] sm:text-[16px]">
+        <p className="mt-4 text-[15px] leading-[1.55] text-[var(--text-color)] sm:text-[17px]">
           {item.body}
         </p>
         <div className="mt-auto pt-7">
@@ -98,13 +98,18 @@ export default function WhoItsFor() {
     <section className="relative isolate overflow-hidden bg-[#f7f9ff] px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
       <div className="mx-auto max-w-[1195px]">
         <header className="mx-auto mb-10 max-w-[1024px] text-center sm:mb-14">
-          <div className="mb-5 flex items-center justify-center gap-4">
-            <span className="hidden h-px w-16 bg-gradient-to-r from-transparent to-blue-200 sm:block" />
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2 text-[11px] font-bold uppercase tracking-[0.1em] text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.07)] sm:text-[13px]">✦ WHO IT'S FOR</span>
-            <span className="hidden h-px w-16 bg-gradient-to-l from-transparent to-blue-200 sm:block" />
+          <div className="mb-6 flex items-center justify-center gap-4">
+            <span className="hidden h-px w-20 bg-gradient-to-r from-transparent to-blue-200 sm:block" />
+ 
+            <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.06)]">
+              <span className="text-base leading-none">✦</span>
+              WHO IT'S FOR
+            </p>
+ 
+            <span className="hidden h-px w-20 bg-gradient-to-l from-transparent to-blue-200 sm:block" />
           </div>
-          <h2 className="text-[32px] font-medium leading-[1.12] tracking-[-0.055em] text-[#111116] sm:text-[44px] lg:text-[52px]">Built for Businesses That Want to  <span className="text-[var(--primary-color)]">Grow Their Digital Presence</span></h2>
-          <p className="mx-auto mt-5 text-[15px] leading-[1.75] text-[#737381] sm:text-[18px]">Whether you manage a small business or oversee marketing activities across multiple channels, maintaining online visibility requires consistent effort. Foundly.ai brings together tools that can support different parts of this process.</p>
+          <h2 className="title mt-4 leading-[1.08]">Built for Businesses That Want to  <span className="text-[var(--primary-color)]">Grow Their Digital Presence</span></h2>
+          <p className="desc leading-[1.65] text-[var(--text-color)]">Whether you manage a small business or oversee marketing activities across multiple channels, maintaining online visibility requires consistent effort. Foundly.ai brings together tools that can support different parts of this process.</p>
         </header>
       </div>
       {/* Soft blue and violet background waves */}

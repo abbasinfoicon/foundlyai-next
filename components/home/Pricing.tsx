@@ -94,10 +94,10 @@ function FeatureItem({ feature }: { feature: Feature }) {
         <FiCheck className="h-3 w-3" strokeWidth={3} />
       </span>
       <span className="min-w-0">
-        <strong className="block text-[13px] font-semibold leading-[1.35] tracking-[-0.025em] text-[#101a36] sm:text-[16px]">
+        <strong className="block text-[13px] font-semibold leading-[1.35] text-[#101a36] sm:text-[17px]">
           {feature.title}
         </strong>
-        <span className="mt-1 block text-[12px] leading-[1.45] text-[#687492] sm:text-[14px]">
+        <span className="mt-1 block text-[13px] leading-[1.45] text-[var(--text-color)] sm:text-[15px]">
           {feature.description}
         </span>
       </span>
@@ -136,16 +136,16 @@ export default function Pricing() {
         <header className="mx-auto mb-[42px] max-w-[1140px] text-center">
           <div className="mb-6 flex items-center justify-center gap-4">
             <span className="hidden h-px w-20 bg-gradient-to-r from-transparent to-blue-200 sm:block" />
-            <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.08)]">
+            <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.08)]">
               <span className="text-base leading-none">✦</span>
               TRANSPARENT PLANS
             </p>
             <span className="hidden h-px w-20 bg-gradient-to-l from-transparent to-blue-200 sm:block" />
           </div>
-          <h2 className="title mt-4 font-medium leading-[1.08] tracking-[-0.065em]">
+          <h2 className="title mt-4 leading-[1.08]">
             Everything You Need to Get Started with <span className="text-[var(--primary-color)]">Smarter Marketing</span>
           </h2>
-          <p className="desc mx-auto mt-5 leading-[1.65] text-[#737381]">
+          <p className="desc mx-auto mt-5 leading-[1.65] text-[var(--text-color)]">
             Bring SEO, content creation and social media workflows together through one platform. Explore the available Foundly.ai plan to understand the included features, publishing limits, supported integrations and subscription terms.
           </p>
         </header>
@@ -157,14 +157,14 @@ export default function Pricing() {
             <div className="relative isolate flex min-h-[540px] flex-col items-start justify-center overflow-hidden border-b border-[#e7edfb] bg-[linear-gradient(145deg,#f3faff_0%,#f7f8ff_54%,#f0edff_100%)] px-5 pb-[220px] pt-10 text-left sm:px-7 sm:pt-12 lg:border-b-0 lg:border-r lg:px-9">
               <div className="pointer-events-none absolute -right-20 -top-24 -z-10 h-72 w-72 rounded-full bg-[#b9d5ff]/45 blur-3xl" />
               <div className="pointer-events-none absolute -left-28 bottom-10 -z-10 h-64 w-64 rounded-full bg-[#c7c0ff]/40 blur-3xl" />
-              <h3 className="mt-7 text-[36px] font-bold leading-[1.02] tracking-[-0.055em] text-[#101a3c] sm:text-[43px]">
+              <h3 className="mt-7 text-[36px] font-bold leading-[1.02] text-[#101a3c] sm:text-[43px]">
                 SEO + <span className="block bg-gradient-to-r from-[#1765f5] via-[#4255f5] to-[#853df0] bg-clip-text text-transparent">Social Media</span>
               </h3>
               <span className="inline-flex w-fit items-center gap-2 rounded-full border border-[#dce7ff] bg-white/80 px-4 py-2 text-[12px] font-semibold text-[#245ae2] shadow-[0_5px_18px_rgba(70,111,220,0.08)] sm:text-[13px]">
                 <FaWandMagicSparkles className="h-3 w-3" />
                 Limited-time offer
               </span>
-              <p className="mt-4 max-w-[310px] text-[15px] leading-[1.55] text-[#657292] sm:text-[16px]">
+              <p className="mt-4 max-w-[310px] text-[15px] leading-[1.55] text-[var(--text-color)] sm:text-[17px]">
                 All in one: search and social media, one price
               </p>
 
@@ -172,10 +172,10 @@ export default function Pricing() {
                 <s className="text-[20px] sm:text-[24px] text-[#9999a9] decoration-[#ef7e86] decoration-2">
                   $149
                 </s>
-                <strong className="bg-gradient-to-b from-[#1766ff] to-[#2750dc] bg-clip-text text-[76px] font-bold leading-[0.9] tracking-[-0.075em] text-transparent sm:text-[88px] pr-1">
+                <strong className="bg-gradient-to-b from-[#1766ff] to-[#2750dc] bg-clip-text text-[76px] font-bold leading-[0.9] text-transparent sm:text-[88px] pr-1">
                   $49
                 </strong>
-                <span className="pt-2 text-left text-[11px] sm:text-[13px] leading-[1.25] text-[#11111a]">
+                <span className="pt-2 text-left text-[11px] sm:text-[13px] leading-[1.25] text-[var(--text-color2)]">
                   <b className="block font-medium">USD</b>
                   <span>per month</span>
                 </span>
@@ -187,7 +187,7 @@ export default function Pricing() {
               >
                 Get SEO + Social Media <FiArrowRight className="h-4 w-4" />
               </Link>
-              <p className="mt-3 text-[12px] text-[#7e88a4] text-center w-full">Cancel anytime.</p>
+              <p className="mt-3 text-[12px] text-[var(--text-color)] text-center w-full">Cancel anytime.</p>
 
 
               <svg
@@ -322,7 +322,7 @@ export default function Pricing() {
             <div className="flex min-w-0 flex-col bg-[linear-gradient(145deg,#ffffff_0%,#fcfdff_100%)] px-5 py-8 sm:px-8 sm:py-9 lg:px-10 lg:py-8">
               <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
                 <div>
-                  <h3 className="text-[24px] font-bold tracking-[-0.045em] text-[#101a3c] sm:text-[29px]">What’s included</h3>
+                  <h3 className="text-[24px] font-bold text-[#101a3c] sm:text-[29px]">What’s included</h3>
                   <span className="mt-3 block h-[3px] w-10 rounded-full bg-gradient-to-r from-[#1765f5] to-[#8051f1]" />
                 </div>
                 <span className="inline-flex items-center gap-2 rounded-full border border-[#ece7ff] bg-[#f5f0ff] px-4 py-2.5 text-[12px] font-semibold text-[#5835d9] shadow-[0_5px_18px_rgba(100,74,220,0.07)] sm:text-[13px]">
@@ -346,7 +346,7 @@ export default function Pricing() {
               {/* Integration/platform marks */}
               <div className="mt-6 grid grid-cols-1 gap-5 border-t border-[#e8ebf4] pt-5 sm:grid-cols-3 sm:gap-3">
                 <div>
-                  <p className="mb-2 text-[10px] sm:text-[12px] uppercase tracking-[0.07em] text-[#66667c]">
+                  <p className="mb-2 text-[10px] sm:text-[12px] uppercase text-[var(--text-color)]">
                     Publishes to
                   </p>
                   <div className="flex flex-wrap gap-1">
@@ -357,7 +357,7 @@ export default function Pricing() {
                   </div>
                 </div>
                 <div>
-                  <p className="mb-2 text-[10px] sm:text-[12px] uppercase tracking-[0.07em] text-[#66667c]">
+                  <p className="mb-2 text-[10px] sm:text-[12px] uppercase text-[var(--text-color)]">
                     Posts on
                   </p>
                   <div className="flex flex-wrap gap-1">
@@ -368,7 +368,7 @@ export default function Pricing() {
                   </div>
                 </div>
                 <div>
-                  <p className="mb-2 text-[10px] sm:text-[12px] uppercase tracking-[0.07em] text-[#66667c]">
+                  <p className="mb-2 text-[10px] sm:text-[12px] uppercase text-[var(--text-color)]">
                     Found in
                   </p>
                   <div className="flex flex-wrap gap-1">
@@ -394,7 +394,7 @@ export default function Pricing() {
             <FiPercent />
           </span>
           <div className="min-w-0 flex-1">
-            <p className="text-[16px] sm:text-[21px] font-semibold tracking-[-0.03em]">
+            <p className="text-[16px] sm:text-[21px] font-semibold">
               More websites, <span className="text-white/70">less per website</span>
             </p>
             <p className="mt-1 text-[12px] sm:text-[15px] text-[#dedde7]">

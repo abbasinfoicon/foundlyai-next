@@ -1,6 +1,6 @@
  "use client"
 
-import React, { useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import MenuExpand from "./MenuExpand"
 import Link from "next/link"
 
@@ -8,12 +8,39 @@ export type MegaMenuType = "products" | "resources" | null
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState<MegaMenuType>(null)
+  const headerRef = useRef<HTMLElement>(null)
 
   const closeMenu = () => setActiveMenu(null)
+
+  useEffect(() => {
+    if (!activeMenu) return
+
+    const handlePointerDown = (event: PointerEvent) => {
+      if (
+        headerRef.current &&
+        !headerRef.current.contains(event.target as Node)
+      ) {
+        closeMenu()
+      }
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closeMenu()
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown)
+    document.addEventListener("keydown", handleKeyDown)
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown)
+      document.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [activeMenu])
 
   return (
     <div className="sticky top-0 z-[100] w-full border-t border-[#e9e9ec] bg-white px-3 pt-3 sm:px-5 sm:pt-5">
       <header
+        ref={headerRef}
         className="relative mx-auto flex min-h-[76px] w-full max-w-[1240px] items-center justify-between rounded-[99px] border border-[#ededf1] bg-white px-5 py-1 shadow-[0_8px_24px_rgba(26,22,54,0.08)] sm:px-7 lg:px-8"
       >
         <Link
@@ -28,7 +55,7 @@ const Header = () => {
           />
         </Link>
 
-        <nav className="hidden h-full items-center gap-7 text-[15px] font-medium tracking-[-0.03em] text-[#171525] lg:flex xl:gap-8" aria-label="Main navigation">
+        <nav className="hidden h-full items-center gap-7 text-[16px] font-bold text-[var(--text-color2)] lg:flex xl:gap-8" aria-label="Main navigation">
           <button
             type="button"
             className={`inline-flex h-12 items-center gap-1.5 transition-colors hover:text-[var(--primary-color)] ${activeMenu === "products" ? "text-[var(--primary-color)]" : ""}`}
@@ -53,12 +80,12 @@ const Header = () => {
         </nav>
 
         <div className="hidden shrink-0 items-center gap-2.5 lg:flex">
-          <Link className="inline-flex h-11 items-center justify-center rounded-full border border-[#dedee5] px-5 text-sm font-medium tracking-[-0.02em] text-[#171525] transition-colors hover:border-[var(--primary-color)] hover:text-[var(--primary-color)]" href="/signin">Sign in</Link>
-          <Link className="inline-flex h-11 items-center justify-center rounded-full bg-[var(--primary-color)] px-6 text-sm font-semibold tracking-[-0.02em] text-white shadow-[0_5px_12px_rgba(105,88,245,0.2)] transition hover:-translate-y-0.5 hover:bg-[#5d4be8]" href="/signup">Start Free</Link>
+          <Link className="inline-flex h-11 items-center justify-center rounded-full border border-[#dedee5] px-5 text-sm font-medium text-[var(--text-color)] transition-colors hover:border-[var(--primary-color)] hover:text-[var(--primary-color)]" href="/signin">Sign in</Link>
+          <Link className="inline-flex h-11 items-center justify-center rounded-full bg-[var(--primary-color)] px-6 text-sm font-semibold text-white shadow-[0_5px_12px_rgba(105,88,245,0.2)] transition hover:-translate-y-0.5 hover:bg-[#5d4be8]" href="/signup">Start Free</Link>
         </div>
 
         <button
-          className="flex h-10 w-10 shrink-0 flex-col items-center justify-center gap-[5px] rounded-full border border-[#e7e5ef] text-[#171525] transition hover:bg-[#f8f7ff] lg:hidden"
+          className="flex h-10 w-10 shrink-0 flex-col items-center justify-center gap-[5px] rounded-full border border-[#e7e5ef] text-[var(--text-color)] transition hover:bg-[#f8f7ff] lg:hidden"
           type="button"
           aria-label={activeMenu ? "Close menu" : "Open menu"}
           aria-expanded={Boolean(activeMenu)}
