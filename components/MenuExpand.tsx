@@ -19,7 +19,7 @@ type MenuItem = {
 
 const productItems: MenuItem[] = [
   {
-    title: "AI Blog Writer",
+    title: "Automatic Blog Publishing",
     description: "Create SEO-optimized articles with AI-powered content generation.",
     href: "#",
     icon: "pen",
@@ -37,13 +37,7 @@ const productItems: MenuItem[] = [
     icon: "spark",
   },
   {
-    title: "Auto Blog Publishing",
-    description: "Automate your blog publishing workflow and maintain a consistent content schedule.",
-    href: "#",
-    icon: "calendar",
-  },
-  {
-    title: "Local SEO",
+    title: "Local SEO Management",
     description: "Improve local search visibility and manage your Google Business Profile.",
     href: "#",
     icon: "pin",
@@ -53,12 +47,6 @@ const productItems: MenuItem[] = [
     description: "Discover relevant keywords, search trends and new content opportunities.",
     href: "#",
     icon: "search",
-  },
-  {
-    title: "Local Business",
-    description: "Manage your business information and strengthen your online local presence.",
-    href: "#",
-    icon: "shop",
   },
   {
     title: "Citations & Competitors",
@@ -75,7 +63,6 @@ const productItems: MenuItem[] = [
 ];
 
 const resourceItems: MenuItem[] = [
-  { title: "Blog", description: "Plain-English guides to getting found online.", href: "/", icon: "book" },
   { title: "Case Studies", description: "Real businesses and the results they recorded.", href: "/", icon: "trend" },
   { title: "Help Center", description: "Getting started, publishing, billing and your account.", href: "/", icon: "life" },
   { title: "SEO Glossary", description: "SEO and AI search words, explained simply.", href: "/", icon: "book" },
