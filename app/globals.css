@@ -132,3 +132,9 @@ body {
 }
 
 /* Testimonial slider css end */
+
+/* Temporary global font preview dropdown */
+html[data-preview-font="true"] body,
+html[data-preview-font="true"] body * {
+  font-family: var(--foundly-preview-font) !important;
+}

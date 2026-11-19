@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Dosis, Inter, Judson, Noto_Naskh_Arabic, Nunito, Oxygen, Raleway, Roboto_Condensed, Style_Script, Tenor_Sans } from "next/font/google";
+import { Inter, Raleway, } from "next/font/google";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
@@ -9,6 +9,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import ClaimOffer from "@/components/ClaimOffer";
+import FontFamilyDropdown from "@/components/FontFamilyDropdown";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -30,12 +31,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
-      <body className={`${fontfamily.className} min-h-full flex flex-col`}>
+      <body className={`min-h-full flex flex-col`}> {/* fontfamily.variable ${fontfamily.className} */}
         <ClaimOffer />
         <Header />
         {children}
         <Footer />
         <ScrollToTop />
+        <FontFamilyDropdown />
       </body>
     </html>
   );
