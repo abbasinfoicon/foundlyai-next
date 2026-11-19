@@ -77,15 +77,15 @@ const Hero = () => {
 
             <p className="subtitle inline-flex items-center gap-2 rounded-full border border-[#245ae2]/10 bg-gradient-to-r from-white via-[#f5f7ff] to-white px-5 py-2.5 text-[13px] font-bold uppercase text-[var(--primary-color)] shadow-[0_2px_12px_rgba(36,90,226,0.06)]">
               <span className="text-base leading-none">✦</span>
-              Smarter Marketing, Less Effort
+              Marketing That Runs Itself.
             </p>
 
             <span className="hidden h-px w-20 bg-gradient-to-l from-transparent to-blue-200 sm:block" />
           </div>
 
           <h1 className="title mt-4 leading-[1.08]">
-            Grow Your Online Visibility with {" "}
-            <span className="text-[var(--primary-color)]">AI-Powered SEO and Marketing Automation</span>
+            Be Found on Google. {" "}
+            <span className="text-[var(--primary-color)] block"> Be Recommended by AI.</span>
           </h1>
 
           {/* Search platform icons */}
